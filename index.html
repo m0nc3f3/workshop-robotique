@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Systèmes Embarqués — Workshop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="circuit-bg"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="nav-dot"></span>
+      SE_WORKSHOP
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#programme">Programme</a></li>
+      <li><a href="#team">Équipe</a></li>
+      <li><a href="#downloads">Ressources</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="pulse-dot"></span>
+        Workshop · Systèmes Embarqués
+      </div>
+      <h1 class="hero-title">
+        LE CODE<br/>
+        QUI TOUCHE<br/>
+        LE <em>MONDE</em><br/>
+        RÉEL.
+      </h1>
+      <p class="hero-sub">
+        Quand votre badge ouvre une porte, quand votre voiture freine seule,
+        quand un drone corrige sa trajectoire en plein vol — c'est ça, les systèmes embarqués.
+        Venez voir comment ça marche de l'intérieur.
+      </p>
+      <div class="hero-info-row">
+        <div class="info-pill">📅 15 Mai 2026</div>
+        <div class="info-pill">📍 ISTA NTIC — Sidi Maârouf, Ain Chock</div>
+        
+      </div>
+      <div class="hero-ctas">
+        <a href="#programme" class="btn-primary">Voir le programme</a>
+        <a href="#downloads" class="btn-ghost">Ressources ↓</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="chip-wrap">
+        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#39d353" stroke-opacity="0.35" stroke-width="1.2">
+            <polyline points="100,95 70,95 70,55"/>
+            <polyline points="150,95 150,65 180,65 180,40"/>
+            <polyline points="200,95 235,95 235,65"/>
+            <polyline points="205,150 245,150"/>
+            <polyline points="200,205 235,205 235,245"/>
+            <polyline points="150,205 150,235 120,235 120,260"/>
+            <polyline points="100,205 70,205 70,245"/>
+            <polyline points="95,150 55,150"/>
+          </g>
+          <g fill="#39d353" fill-opacity="0.5">
+            <circle cx="70" cy="55" r="4"/>
+            <circle cx="180" cy="40" r="4"/>
+            <circle cx="235" cy="65" r="4"/>
+            <circle cx="245" cy="150" r="4"/>
+            <circle cx="235" cy="245" r="4"/>
+            <circle cx="120" cy="260" r="4"/>
+            <circle cx="70" cy="245" r="4"/>
+            <circle cx="55" cy="150" r="4"/>
+          </g>
+          <rect x="90" y="90" width="120" height="120" rx="4" fill="#0a1a0f" stroke="#39d353" stroke-opacity="0.6" stroke-width="1.5"/>
+          <g stroke="#39d353" stroke-opacity="0.4" stroke-width="1">
+            <line x1="72" y1="106" x2="90" y2="106"/><line x1="72" y1="122" x2="90" y2="122"/>
+            <line x1="72" y1="138" x2="90" y2="138"/><line x1="72" y1="154" x2="90" y2="154"/>
+            <line x1="72" y1="170" x2="90" y2="170"/><line x1="72" y1="186" x2="90" y2="186"/>
+            <line x1="210" y1="106" x2="228" y2="106"/><line x1="210" y1="122" x2="228" y2="122"/>
+            <line x1="210" y1="138" x2="228" y2="138"/><line x1="210" y1="154" x2="228" y2="154"/>
+            <line x1="210" y1="170" x2="228" y2="170"/><line x1="210" y1="186" x2="228" y2="186"/>
+            <line x1="106" y1="72" x2="106" y2="90"/><line x1="122" y1="72" x2="122" y2="90"/>
+            <line x1="138" y1="72" x2="138" y2="90"/><line x1="154" y1="72" x2="154" y2="90"/>
+            <line x1="170" y1="72" x2="170" y2="90"/><line x1="186" y1="72" x2="186" y2="90"/>
+            <line x1="106" y1="210" x2="106" y2="228"/><line x1="122" y1="210" x2="122" y2="228"/>
+            <line x1="138" y1="210" x2="138" y2="228"/><line x1="154" y1="210" x2="154" y2="228"/>
+            <line x1="170" y1="210" x2="170" y2="228"/><line x1="186" y1="210" x2="186" y2="228"/>
+          </g>
+          <rect x="108" y="108" width="84" height="84" rx="2" fill="#0d2010" stroke="#39d353" stroke-opacity="0.2" stroke-width="1"/>
+          <text x="150" y="144" font-family="JetBrains Mono" font-size="12" fill="#39d353" fill-opacity="0.9" text-anchor="middle">MCU</text>
+          <text x="150" y="160" font-family="JetBrains Mono" font-size="8" fill="#39d353" fill-opacity="0.4" text-anchor="middle">EMBEDDED</text>
+          <text x="150" y="174" font-family="JetBrains Mono" font-size="7" fill="#39d353" fill-opacity="0.25" text-anchor="middle">32-BIT ARM</text>
+          <circle cx="150" cy="150" r="4" fill="#39d353" fill-opacity="0.9">
+            <animate attributeName="r" values="4;9;4" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="fill-opacity" values="0.9;0.1;0.9" dur="2s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="252" cy="52" r="9" fill="#0a1a0f" stroke="#39d353" stroke-opacity="0.5" stroke-width="1"/>
+          <circle cx="252" cy="52" r="4.5" fill="#39d353">
+            <animate attributeName="fill-opacity" values="1;0.1;1" dur="1.1s" repeatCount="indefinite"/>
+          </circle>
+          <line x1="55" y1="150" x2="90" y2="150" stroke="#39d353" stroke-width="1.5" stroke-dasharray="6 20">
+            <animate attributeName="stroke-dashoffset" from="26" to="0" dur="1s" repeatCount="indefinite"/>
+          </line>
+          <line x1="210" y1="150" x2="245" y2="150" stroke="#39d353" stroke-width="1.5" stroke-dasharray="6 20">
+            <animate attributeName="stroke-dashoffset" from="0" to="26" dur="1s" repeatCount="indefinite"/>
+          </line>
+          <line x1="150" y1="55" x2="150" y2="90" stroke="#f0a500" stroke-width="1.5" stroke-dasharray="6 20">
+            <animate attributeName="stroke-dashoffset" from="26" to="0" dur="1.4s" repeatCount="indefinite"/>
+          </line>
+          <line x1="150" y1="210" x2="150" y2="245" stroke="#f0a500" stroke-width="1.5" stroke-dasharray="6 20">
+            <animate attributeName="stroke-dashoffset" from="0" to="26" dur="1.4s" repeatCount="indefinite"/>
+          </line>
+        </svg>
+        <div class="chip-label">ARDUINO UNO R3</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section id="intro">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">01</span>
+        <div>
+          <h2 class="sec-title">Vous les utilisez<br/>sans le savoir.</h2>
+          <p class="sec-lead">Pas besoin de cours magistral. Regardez autour de vous.</p>
+        </div>
+      </div>
+      <div class="cards-grid stagger">
+        <div class="card">
+          <span class="card-icon">🪪</span>
+          <span class="card-tag">Accès</span>
+          <h3>Vous scannez un badge</h3>
+          <p>Un microcontrôleur lit l'identifiant et décide en quelques millisecondes d'ouvrir la porte — ou non.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">🚗</span>
+          <span class="card-tag">Automobile</span>
+          <h3>Votre voiture freine seule</h3>
+          <p>Des capteurs détectent un obstacle, le calculateur embarqué active les freins avant même que votre pied ne réagisse.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">📱</span>
+          <span class="card-tag">Mobile</span>
+          <h3>Votre écran se retourne</h3>
+          <p>Un accéléromètre mesure l'inclinaison, un processeur interprète les données — en temps réel, dans votre poche.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">🚁</span>
+          <span class="card-tag">Aérien</span>
+          <h3>Un drone reste stable</h3>
+          <p>Des centaines de corrections par seconde. Un gyroscope mesure, un MCU calcule, les moteurs s'ajustent.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">🏥</span>
+          <span class="card-tag">Médical</span>
+          <h3>Un pacemaker bat</h3>
+          <p>Un minuscule système embarqué surveille votre rythme cardiaque et envoie une impulsion au bon moment. Sans jamais planter.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">🌡️</span>
+          <span class="card-tag">Domotique</span>
+          <h3>Votre clim s'adapte</h3>
+          <p>Un capteur lit la température, un processeur compare à votre consigne et ajuste le compresseur. Simple, fiable, embarqué.</p>
+        </div>
+      </div>
+      <div class="quote-block reveal">
+        <p>Ce qui rend tout ça possible : une combinaison de <strong>matériel</strong> (microcontrôleurs, capteurs, actionneurs) et de <strong>logiciel</strong> qui tourne directement dessus. La machine lit, réfléchit, et agit. <strong>En temps réel.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMME -->
+  <section id="programme">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">02</span>
+        <div>
+          <h2 class="sec-title">Ce qui vous attend.</h2>
+          <p class="sec-lead">Des démonstrations live, du matériel entre les mains — pas juste des slides.</p>
+        </div>
+      </div>
+      <div class="prog-list">
+        <div class="prog-row reveal">
+          <div class="prog-dot-col"><div class="pdot"></div><div class="pline"></div></div>
+          <div class="prog-body">
+            <span class="prog-badge">Introduction</span>
+            <h3>Introduction à la Robotique</h3>
+            <p>Les bases avec des exemples concrets. Qu'est-ce que la robotique aujourd'hui ? Comment le logiciel et le matériel interagissent ? Pourquoi un programme embarqué est différent d'une app classique ?</p>
+            <div class="prog-tags"><span>Robotique & réalité</span><span>Hardware vs Software</span><span>Exemples concrets</span></div>
+          </div>
+        </div>
+        <div class="prog-row reveal">
+          <div class="prog-dot-col"><div class="pdot pdot--green"></div><div class="pline"></div></div>
+          <div class="prog-body">
+            <span class="prog-badge prog-badge--green">Démo Live</span>
+            <h3>Arduino en Action</h3>
+            <p>Une LED qui clignote — premier pas vers tout le reste. On voit comment un microcontrôleur reçoit du code, l'exécute, et continue à tourner après déconnexion. Le moment où votre code vit dans la machine.</p>
+            <div class="prog-tags"><span>Arduino live</span><span>LED & GPIO</span><span>Upload firmware</span></div>
+          </div>
+        </div>
+        <div class="prog-row reveal">
+          <div class="prog-dot-col"><div class="pdot pdot--amber"></div><div class="pline"></div></div>
+          <div class="prog-body">
+            <span class="prog-badge prog-badge--amber">Capteurs</span>
+            <h3>Sentir le Monde</h3>
+            <p>Comment une machine perçoit-elle son environnement ? Démonstrations en direct : distance, lumière, mouvement. Vous verrez, toucherez, et comprendrez.</p>
+            <div class="prog-tags"><span>Distance</span><span>Lumière</span><span>Mouvement</span></div>
+          </div>
+        </div>
+        <div class="prog-row reveal">
+          <div class="prog-dot-col"><div class="pdot pdot--green"></div><div class="pline"></div></div>
+          <div class="prog-body">
+            <span class="prog-badge prog-badge--green">Démo Live</span>
+            <h3>Raspberry Pi</h3>
+            <p>Deux approches, deux puissances différentes. Le Pi est un vrai ordinateur miniature : Linux, Python, interfaces graphiques. On montre jusqu'où ça peut aller.</p>
+            <div class="prog-tags"><span>Pi vs Arduino</span><span>Python & GPIO</span><span>Automatisation</span></div>
+          </div>
+        </div>
+        <div class="prog-row reveal">
+          <div class="prog-dot-col"><div class="pdot pdot--special"></div><div class="pline"></div></div>
+          <div class="prog-body">
+            <span class="prog-badge prog-badge--special">Interactif</span>
+            <h3>Vos Mains sur le Matériel</h3>
+            <p>Fini d'observer — c'est votre tour. Montage de circuits, manipulation libre, questions en direct. Repartez avec quelque chose de concret, pas juste des notes.</p>
+            <div class="prog-tags"><span>Montage de circuits</span><span>Manipulation libre</span><span>Questions en direct</span></div>
+          </div>
+        </div>
+        <div class="prog-row reveal">
+          <div class="prog-dot-col"><div class="pdot"></div><div class="pline"></div></div>
+          <div class="prog-body">
+            <span class="prog-badge">Discussion</span>
+            <h3>Questions Ouvertes</h3>
+            <p>Comment continuer à apprendre ? Par où commencer ses projets ? Pas de question trop basique ici.</p>
+            <div class="prog-tags"><span>Conseils pour débuter</span><span>Idées de projets</span></div>
+          </div>
+        </div>
+        <div class="prog-row reveal">
+          <div class="prog-dot-col"><div class="pdot pdot--amber"></div></div>
+          <div class="prog-body">
+            <span class="prog-badge prog-badge--amber">Final</span>
+            <h3>Conclusion</h3>
+            <p>Récap de tout ce qu'on a exploré. La robotique commence avec la curiosité et un premier projet simple. Ce workshop, c'est ce premier projet.</p>
+            <div class="prog-tags"><span>Récapitulatif</span><span>Prochaines étapes</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">03</span>
+        <div>
+          <h2 class="sec-title">L'équipe.</h2>
+        </div>
+      </div>
+
+      <div class="prof-block reveal">
+        <div class="prof-card">
+          <div class="prof-avatar-outer">
+            <div class="prof-avatar">OH</div>
+          </div>
+          <div class="prof-info">
+            <span class="prof-role">Professeur encadrant</span>
+            <h3 class="prof-name">Mr. Otmane Haqay</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-sep reveal">
+        <div class="sep-line"></div>
+        <span>Présentateurs</span>
+        <div class="sep-line"></div>
+      </div>
+
+      <div class="team-row stagger">
+        <div class="team-card">
+          <div class="team-avatar">MF</div>
+          <h4>Moncef Fennan</h4>
+          <span>Dev 105</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">OS</div>
+          <h4>Oussama Sabar</h4>
+          <span>Dev 105</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOADS -->
+  <section id="downloads">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">04</span>
+        <div>
+          <h2 class="sec-title">Tout est là.</h2>
+          <p class="sec-lead">Slides, code source, projets — prenez tout et continuez chez vous.</p>
+        </div>
+      </div>
+      <div class="dl-grid stagger">
+        <div class="dl-card">
+          <span class="dl-icon">📄</span>
+          <div class="dl-info">
+            <span class="dl-format">PDF · PPTX</span>
+            <h3>Présentation</h3>
+            <p>Les slides complètes du workshop — théorie, schémas et références pour aller plus loin.</p>
+          </div>
+          <a href="#" class="dl-btn">Google Drive ↗</a>
+        </div>
+        <div class="dl-card">
+          <span class="dl-icon">💡</span>
+          <div class="dl-info">
+            <span class="dl-format">C++ · Arduino IDE</span>
+            <h3>Projets Arduino</h3>
+            <p>Code source complet des démonstrations et projets Arduino. Commenté, prêt à flasher.</p>
+          </div>
+          <a href="#" class="dl-btn">Google Drive ↗</a>
+        </div>
+        <div class="dl-card">
+          <span class="dl-icon">🍓</span>
+          <div class="dl-info">
+            <span class="dl-format">Python 3</span>
+            <h3>Projets Raspberry Pi</h3>
+            <p>Scripts Python des démonstrations Pi et leurs projets — GPIO, automatisation, hardware/software.</p>
+          </div>
+          <a href="#" class="dl-btn">Google Drive ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section id="closing">
+    <div class="closing-wrap reveal">
+      <p class="closing-eyebrow">Un seul prérequis</p>
+      <h2 class="closing-title">La curiosité.</h2>
+      <p class="closing-body">Aucune expérience en électronique n'est nécessaire. Si vous vous êtes déjà demandé comment les machines autour de vous fonctionnent vraiment — vous avez tout ce qu'il faut.</p>
+      <a href="#programme" class="btn-primary">Voir le programme</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-wrap">
+      <span class="footer-brand">SE_WORKSHOP</span>
+      <span class="footer-copy">Dev 105 - Dev 106 · ISTA NTIC · 15 Mai 2026</span>
+      <nav class="footer-nav">
+        <a href="#intro">Intro</a>
+        <a href="#programme">Programme</a>
+        <a href="#team">Équipe</a>
+        <a href="#downloads">Ressources</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
